@@ -1,8 +1,8 @@
 ---
-tags: post
 layout: oclareArticle.njk
 title: Fred Thomas Martin
 image: "/Images/FredThomasMartin.jpg"
+date: 2019-01-02
 ---
 
 # Fred Thomas Martin

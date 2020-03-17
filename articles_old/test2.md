@@ -1,8 +1,8 @@
 ---
-tags: post
 layout: oclareArticle.njk
 title: Princeton station
 image: "/Images/PrincetonStation.jpg"
+date: 2018-01-02
 ---
 
 # Princeton station (NJ Transit)

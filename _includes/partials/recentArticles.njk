@@ -1,0 +1,39 @@
+<div class="container-fluid oclare-background-color-5">
+<!--News Header-->
+    <div class="row">
+        <div class="col-md-offset-6 col-md-6 col-lg-offset-6 col-lg-6 col-sm-12 col-xs-12 oclare-background-default text-right" id="news-header">
+            <h4 class="oclare-color-1">Recent News:</h4>
+        </div>
+    </div>
+    <!--Articles-->
+    <div class="row">
+        <div class="container-fluid oclare-background-color-5 margin-sm">
+            <!--ForEach Article (Latest 3)-->
+            {%- for post in collections.post|reverse -%}
+            {% if loop.index0 < 3 %}
+                <div class="row padding-y-sm">
+                    <div class="col-xs-12 col-lg-12 padding-x-xs">
+                        <h4 class="oclare-color-1"><em>{{ post.data.title }}</em></h4>
+                    </div>                 
+                </div>
+                <div class="row flex-row">                    
+                    <div class="col-md-8 col-sm-12 col-xs-12 padding-left-0">
+                        <img src=
+                        {% if post.data.image == '' %}
+                            "/Images/cms/ArticlePlaceholder.jpg"            
+                        {% else %}
+                            "{{ post.data.image }}"
+                        {% endif %} class="media-object article-card">
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12 read-more padding-0">
+                        <a href="{{ post.url }}">Read More...</a>
+                    </div>                    
+                </div>
+            {% endif %}
+            {%- endfor -%}
+        </div>
+    </div>
+    <div class="row flex-row" id="see-all">
+        <a class="oclare-color-1" href="/archive/"><h4><em><strong>View More</strong></em></h4></a>
+    </div>
+</div>

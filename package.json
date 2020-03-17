@@ -19,6 +19,6 @@
   "homepage": "https://github.com/MitchBabin/MitchBabin.github.io#readme",
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",
-    "netlify-cms": "^2.10.26"
+    "debug": "^4.1.1"
   }
 }
