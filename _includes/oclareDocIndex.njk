@@ -19,6 +19,7 @@ layout: oclareBase.njk
             </li>
         {% for documentation in collections.documentation %}
                 <li>
+                {{ collections.documentation[0].data.title }}
                     <a href="{{ documentation.url }}">{{ documentation.title }}</a>
                 <li>
         {% endfor %}
