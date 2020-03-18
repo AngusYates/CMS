@@ -11,15 +11,15 @@ layout: oclareBase.njk
         <h1>OCLaRE Documentation</h1>
     </div>
 </div>
-<div class="container-fluid padding-md oclare-background-default">
+<div class="container padding-md oclare-background-default">
     <div class="col-md-2 border">
         <ul>
             <li>
                 <a href="#">Overview</a>
             </li>
-        {% for documentation in collections.documentation %}
+        {% for doc in collections.documentation %}
                 <li>
-                    <a href="{{ documentation.url }}">{{ documentation.title }}</a>
+                    <a href="{{ doc.url }}">{{ doc.title }}</a>
                 <li>
         {% endfor %}
         </ul>
