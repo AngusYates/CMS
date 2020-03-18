@@ -684,6 +684,10 @@ li::marker {
     padding: .15em;
 }
 
+li::marker {
+    color: black;
+}
+
 .menu-link {
     /* all rules required to make the whole div clickable */
     position: absolute;
