@@ -10,7 +10,7 @@ module.exports = function(eleventyConfig) {
         var temp = collection.getAll();
         var temp2 = [];
         for(page in temp){
-            if(page.tags == "documentation"){
+            if(page.tags.includes("documentation")){
                 temp2.push(page);
             }
         }
