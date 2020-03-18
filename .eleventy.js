@@ -1,6 +1,6 @@
 module.exports = function(eleventyConfig) {
 
-    eleventyConfig.addCollection("documentation", function(collection) {
+    eleventyConfig.addCollection("doc", function(collection) {
         return collection.getAll().sort(function(a, b) {
           return b.position - a.position;
         });
