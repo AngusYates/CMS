@@ -7,14 +7,8 @@ module.exports = function(eleventyConfig) {
     // );
 
     eleventyConfig.addCollection("doc", function(collection) {
-        var temp = collection.getAll();
-        var temp2 = [];
-        for(page in temp){
-            if(page.tags.includes("documentation")){
-                temp2.push(page);
-            }
-        }
-        return temp2.sort((a,b) => {
+        var temp = collection.getFilteredByTag("documentation");
+        return temp.sort((a,b) => {
             return b.position - a.position;
         })
     });

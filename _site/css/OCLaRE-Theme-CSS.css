@@ -508,10 +508,6 @@ img {
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
 }
 
-li::marker {
-    color: white;
-}
-
 .mLink {
     color: white;
     text-decoration: none;
