@@ -8,8 +8,25 @@ layout: oclareBase.njk
         <a href="/index.html">
             <img src="/Images/OCLaRE_Logo.png" class="img-responsive media-object" alt="Logo">
         </a>
+        <h1>OCLaRE Documentation</h1>
     </div>
 </div>
 <div class="container-fluid padding-md oclare-background-default">
-    
+    <div class="col-md-4 border">
+        <ul>
+            <li>
+                <a href="#">Overview</a>
+            </li>
+        {% for documentation in collections.documentation %}
+                <li>
+                    <a href="{{ documentation.url }}">{{ documentation.title }}</a>
+                <li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <div class="padding-sm oclare-background-color-5">
+            {{content | safe}}
+        </div>
+    </div>
 </div>
