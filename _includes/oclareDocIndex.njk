@@ -17,11 +17,11 @@ layout: oclareBase.njk
             <li>
                 <a href="#">Overview</a>
             </li>
-        {% for documentation in collections.documentation %}
+        {%- for documentation in collections.post -%}
                 <li>
                     <a href="{{ documentation.url }}">{{ documentation.data.title }}</a>
                 <li>
-        {% endfor %}
+        {%- endfor -%}
         </ul>
     </div>
     <div class="col-md-10">
