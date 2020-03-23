@@ -170,6 +170,10 @@ input.oclare-color-4:focus {
     font-weight: 500;
 }
 
+.docList{
+    list-style: none
+}
+
 .layout {
     display: grid;
     height: 100vh;
