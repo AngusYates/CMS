@@ -6,11 +6,11 @@ layout: oclareBase.njk
     <div class="col-md-2 oclare-background-color-5 border border-dark">
         <ul>
             <li>
-                <a href="#">Overview</a>
+                <a href="#" class="docLink">Overview</a>
             </li>
         {%- for doc in collections.doc -%}
                 <li>
-                    <a href="{{ doc.url }}">{{ doc.data.title }}</a>
+                    <a href="{{ doc.url }}" class="docLink">{{ doc.data.title }}</a>
                 </li>
         {%- endfor -%}
         </ul>

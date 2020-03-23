@@ -158,6 +158,18 @@ input.oclare-color-4:focus {
 
 /*#region Defaults*/
 
+.docLink {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.docLink:hover {
+    text-decoration: underline;
+    color: black;
+    font-weight: 500;
+}
+
 .layout {
     display: grid;
     height: 100vh;
