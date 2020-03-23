@@ -1113,6 +1113,10 @@ li:hover {
     margin-top: 3em;
 }
 
+.margin-top-doc {
+    margin-top: 80px;
+}
+
 .margin-right-0 {
     margin-right: 0;
 }
