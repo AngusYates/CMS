@@ -2,6 +2,8 @@
 layout: oclareDocIndex.njk
 title: Introduction
 ---
+
+
 OCLaRE, an Online Collaborative Lab Reporting Environment, is a web-based application for creating and completing scientific reports. It offers many tools to customize the structure of a lab, allowing users to specify every aspect of a typical experiment, including the type of data that may be entered, how the data will be analyzed, and what kind of pre-lab exercises are required to complete beforehand. Professional-looking reports, suitable for Journal publication, are generated based on the created template.
 
 This tool aims to improve the production of laboratory reports according to the standards of the scientific and engineering communities and in terms of interpretation of results in the form of a laboratory report. OCLaRE structures information gathering, planning, analysis and report writing. Students using OCLaRE interact with partially complete reports using tools and guidelines that use critical thinking, judgment and reflection to produce a comprehensive, well-formatted report. 
