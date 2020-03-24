@@ -1,6 +1,5 @@
 ---
 title: Introduction
-title: OCLaRE Features
 position: 1
 layout: oclareDocIndex.njk
 tags:
