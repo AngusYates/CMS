@@ -164,6 +164,7 @@ input.oclare-color-4:focus {
 
 .oclare-form > h1 {
     text-align: center;
+    text-decoration: underline;
 }
 
 .oclare-form > form > p > label > input{
