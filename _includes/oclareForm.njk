@@ -4,7 +4,7 @@ title: Contact Us
 ---
 <!-- Top Row -->
 {% include "partials/header.njk" %}
-<div class="container-fluid padding-md oclare-background-5">
+<div class="container-fluid padding-md oclare-background-color-5 panel panel-default">
     <h1>{{content | safe}}</h1>
     <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
         <p>
@@ -13,7 +13,7 @@ title: Contact Us
         <p>
             <label>Your Email:</br> <input type="email" name="email" /></label>
         </p>
-        <p class="textBox">
+        <p>
             <label>Message:</br> <textarea name="message"></textarea></label>
         </p>
         <p>

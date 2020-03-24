@@ -158,6 +158,10 @@ input.oclare-color-4:focus {
 
 /*#region Defaults*/
 
+input{
+    width: 400;
+}
+
 textarea {
     width: 100%;
     height: 150px;
@@ -166,7 +170,7 @@ textarea {
     border: 2px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
-  }
+}
 
 .docLink {
     text-decoration: none;

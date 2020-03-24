@@ -1,6 +1,6 @@
 ---
 title: Text Editing Tools
-position: 3
+position: 4
 layout: oclareDocIndex.njk
 tags:
   - documentation

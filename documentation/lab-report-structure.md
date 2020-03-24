@@ -1,6 +1,6 @@
 ---
 title: Lab Report Structure
-position: 2
+position: 3
 layout: oclareDocIndex.njk
 tags:
   - documentation

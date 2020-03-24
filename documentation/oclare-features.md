@@ -1,6 +1,6 @@
 ---
 title: OCLaRE Features
-position: 1
+position: 2
 layout: oclareDocIndex.njk
 tags:
   - documentation
