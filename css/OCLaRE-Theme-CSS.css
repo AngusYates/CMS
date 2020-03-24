@@ -158,6 +158,11 @@ input.oclare-color-4:focus {
 
 /*#region Defaults*/
 
+.oclareForm>p>textarea{
+    width: 80;
+}
+
+
 .docLink {
     text-decoration: none;
     color: black;
