@@ -158,8 +158,9 @@ input.oclare-color-4:focus {
 
 /*#region Defaults*/
 
-.textBox > textarea{
+textarea{
     width: 80;
+    height: 80;
 }
 
 
