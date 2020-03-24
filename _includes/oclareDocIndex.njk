@@ -6,7 +6,7 @@ layout: oclareBase.njk
     <div class="col-md-3 col-sm-3 hidden-xs oclare-background-color-5 panel panel-default margin-top-doc">
         <ul>
             <li>
-                <a href="{{ url }}" class="docLink">Introduction</a>
+                <a href="/userDocs/index.html" class="docLink">Introduction</a>
             </li>
         {%- for doc in collections.doc -%}
                 <li>
@@ -39,7 +39,7 @@ layout: oclareBase.njk
     </nav>
     <div class="col-md-9 col-sm-9 col-xs-12">
         <div class="padding-sm oclare-background-color-5" id="article-body">
-            <div class="oclare-background-color-4 padding-x-sm" id="article-title">
+            <div class="oclare-background-color-4 padding-x-sm padding-bottem-md" id="article-title">
                 <h1 class="margin-0 padding-sm">{{ title }}</h1>
             </div>
             {{content | safe}}
