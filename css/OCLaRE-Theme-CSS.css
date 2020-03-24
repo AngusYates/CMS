@@ -158,12 +158,16 @@ input.oclare-color-4:focus {
 
 /*#region Defaults*/
 
+.oclare-form{
+    margin-top: auto;
+}
+
 input{
     width: 400;
 }
 
 textarea {
-    width: 100%;
+    width: 400;
     height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;

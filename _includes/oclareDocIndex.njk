@@ -5,9 +5,6 @@ layout: oclareBase.njk
 <div class="padding-md oclare-background-default">
     <div class="col-md-3 col-sm-3 hidden-xs oclare-background-color-5 panel panel-default margin-top-doc">
         <ul>
-            <li>
-                <a href="/userDocs/index.html" class="docLink">Introduction</a>
-            </li>
         {%- for doc in collections.doc -%}
                 <li>
                     <a href="{{ doc.url }}" class="docLink">{{ doc.data.title }}</a>
