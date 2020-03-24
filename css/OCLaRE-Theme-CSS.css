@@ -162,7 +162,7 @@ input.oclare-color-4:focus {
     margin-top: auto;
 }
 
-input{
+.oclare-form > input{
     width: 400;
 }
 
