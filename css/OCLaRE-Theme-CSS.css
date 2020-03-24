@@ -158,7 +158,7 @@ input.oclare-color-4:focus {
 
 /*#region Defaults*/
 
-.oclareForm>p>textarea{
+.oclareForm > p{
     width: 80;
 }
 
