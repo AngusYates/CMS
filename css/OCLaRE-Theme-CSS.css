@@ -1,4 +1,4 @@
-/*#region Oclare text colors*/
+/*#region Oclare Text Colors*/
 
 .oclare-color-1 {
     color: var(--color1);
@@ -22,45 +22,6 @@
 
 
 /*#endregion */
-
-
-/*#region Input with oclare color functionality*/
-
-input.oclare-color-1:hover,
-input.oclare-color-1:active,
-input.oclare-color-1:focus {
-    color: white;
-    background-color: var(--color1);
-    outline: 5px auto var(--color1Transparent)
-}
-
-input.oclare-color-2:hover,
-input.oclare-color-2:active,
-input.oclare-color-2:focus {
-    color: white;
-    background-color: var(--color2);
-    outline: 5px auto var(--color2Transparent);
-}
-
-input.oclare-color-3:hover,
-input.oclare-color-3:active,
-input.oclare-color-3:focus {
-    color: white;
-    background-color: var(--color3);
-    outline: 5px auto var(--color3Transparent)
-}
-
-input.oclare-color-4:hover,
-input.oclare-color-4:active,
-input.oclare-color-4:focus {
-    color: white;
-    background-color: var(--color4);
-    color: var(--color4);
-    outline: 5px auto var(--color4Transparent)
-}
-
-
-/*#endregion*/
 
 
 /*#region Oclare border colors*/
@@ -123,9 +84,49 @@ input.oclare-color-4:focus {
 /*#endregion */
 
 
-/*#region Oclare Theme Colors*/
+/*#region Input with oclare color functionality*/
+
+input.oclare-color-1:hover,
+input.oclare-color-1:active,
+input.oclare-color-1:focus {
+    color: white;
+    background-color: var(--color1);
+    outline: 5px auto var(--color1Transparent)
+}
+
+input.oclare-color-2:hover,
+input.oclare-color-2:active,
+input.oclare-color-2:focus {
+    color: white;
+    background-color: var(--color2);
+    outline: 5px auto var(--color2Transparent);
+}
+
+input.oclare-color-3:hover,
+input.oclare-color-3:active,
+input.oclare-color-3:focus {
+    color: white;
+    background-color: var(--color3);
+    outline: 5px auto var(--color3Transparent)
+}
+
+input.oclare-color-4:hover,
+input.oclare-color-4:active,
+input.oclare-color-4:focus {
+    color: white;
+    background-color: var(--color4);
+    color: var(--color4);
+    outline: 5px auto var(--color4Transparent)
+}
+
+
+/*#endregion*/
+
+
+/*#region Oclare Theme Variables*/
 
 :root {
+    /* Theme Colors */
     --oclare-background: #F1F2F4;
     --color1: rgb(23, 75, 131);
     --color1Transparent: rgba(23, 75, 131, 0.5);
@@ -158,16 +159,16 @@ input.oclare-color-4:focus {
 
 /*#region Defaults*/
 
-.oclare-form{
+.oclare-form {
     margin-top: auto;
 }
 
-.oclare-form > h1 {
+.oclare-form>h1 {
     text-align: center;
     text-decoration: underline;
 }
 
-.oclare-form > form > p > label > input{
+.oclare-form>form>p>label>input {
     width: 400;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -197,7 +198,7 @@ textarea {
     font-weight: 500;
 }
 
-.docList{
+.docList {
     list-style: none
 }
 
@@ -275,18 +276,29 @@ img {
 }
 
 #left-background::after,
-#right-background::after {
+#right-background::after,
+#header-image::after {
     content: '';
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(transparent, white);
+    background: radial-gradient(transparent, var(--oclare-background));
 }
 
-#footer-bar {
+#footer-bar,
+#tablet-footer,
+#phone-footer {
     margin-block-start: auto;
+    padding: 0 .5em;
+    justify-content: space-between;
+}
+
+#footer-bar>.footer:first-child,
+#tablet-footer>.footer:first-child,
+#phone-footer>.footer:first-child {
+    padding-left: .5em;
 }
 
 .footer {
@@ -304,18 +316,9 @@ img {
     max-height: 30px;
 }
 
-.footer>.footer {
-    padding-left: 1em;
-}
-
-.footer-col {
-    margin-left: .25em;
-    margin-right: .25em;
-}
-
 .footer-col img {
-    padding-top: .25em;
-    padding-bottom: .25em;
+    padding-top: .5em;
+    padding-bottom: .5em;
 }
 
 .read-more {
@@ -325,21 +328,35 @@ img {
     flex-wrap: nowrap;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 991px) and (min-width: 768px) {
+    #tablet-footer {
+        display: flex!important;
+        justify-content: space-around;
+    }
     .read-more {
         width: 100%;
+    }
+    #links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     #links>.row>a>img {
         max-width: 25%;
         margin: auto;
         padding: 1em;
     }
-    #credits>.row>img {
+    #credits img {
         max-width: 75%;
         max-height: 60px;
         margin: auto;
-        padding: .25em;
+        padding: .5em;
     }
+    #credits {
+        display: flex;
+        flex-direction: column;
+    }
+    /* For EN | FR */
     .footer>div>.row {
         text-align: center;
     }
@@ -372,7 +389,26 @@ img {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+#article-image {
+    min-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 991px) {
+    #article-image>*>* {
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #article-image {
+        flex-direction: row;
+    }
 }
 
 .flex-row-nowrap {
@@ -389,11 +425,10 @@ img {
 }
 
 .flex-row>a>img {
-    padding: 1em .5em 1em .5em;
-    width: 33px;
-    min-width: 33px;
+    height: 20px;
     margin-top: auto;
     margin-bottom: auto;
+    padding: 0 .5em;
 }
 
 #oclare-logo {
@@ -401,8 +436,36 @@ img {
     padding-right: 0;
 }
 
+#header-logo {
+    max-width: 16.666666666666666666666666666667%;
+    min-width: 130px;
+    margin: auto;
+    float: left;
+    padding: .25em 0;
+    padding-left: 1em;
+}
+
+@media screen and (max-width: 991px) {
+    .article-div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 #news-header {
-    border-radius: 0px 0px 0px 55px;
+    float: none;
+    padding: .5em;
+    border-radius: 0px 0px 55px 0px;
+    text-align: left;
+}
+
+@media screen and (min-width: 992px) {
+    #news-header {
+        padding: .25em;
+        border-radius: 0px 0px 0px 55px;
+        text-align: right;
+    }
 }
 
 #article-header {
@@ -536,9 +599,20 @@ img {
     }
 }
 
-@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 767px) {
     .ipad-nav {
         display: none !important;
+    }
+    #phone-footer {
+        display: flex!important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #phone-footer .credit-img a {
+        max-width: 50%;
+        margin: auto;
+        padding-bottom: .5em;
     }
 }
 
@@ -741,10 +815,6 @@ li::marker {
     z-index: 1;
 }
 
-li:hover {
-    color: white;
-}
-
 .dropdown-menu.list-group {
     margin-top: 0;
     padding-bottom: 20px;
@@ -831,7 +901,8 @@ li:hover {
 }
 
 .flex-xs-footer {
-    justify-content: space-around;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .xs-footer>a>img {
@@ -1327,7 +1398,8 @@ li:hover {
 #article-content>* {
     width: 100%;
     margin: 0.25em 0 0.25em 0;
-    text-align: justify;
+    padding: 1em 1em 1em 1em;
+    text-align: left;
 }
 
 #article-content a {
@@ -1354,3 +1426,88 @@ li:hover {
 
 
 /*#endregion*/
+
+
+/* #region Navbar */
+
+#nav-bar,
+#nav-item-collection {
+    display: flex;
+    flex-wrap: nowrap;
+    background: var(--color2);
+    width: 100%;
+    margin-bottom: .5em;
+}
+
+#nav-item-collection {
+    margin: 0;
+}
+
+.oclare-nav-item {
+    padding: 0 1em;
+    min-height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    #nav-bar {
+        flex-wrap: wrap;
+    }
+    #header-logo {
+        margin: auto;
+    }
+    #nav-item-collection {
+        justify-content: space-around;
+    }
+    .oclare-nav-item {
+        padding: 0;
+    }
+}
+
+a.oclare-nav-item {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+a.oclare-nav-item:hover {
+    background: var(--oclare-background);
+    color: var(--color2);
+    text-decoration: none;
+}
+
+
+/* Tablet */
+
+@media screen and (max-width: 991px) and (min-width: 767) {}
+
+
+/* #endregion */
+
+
+/* #region Header on tablet */
+
+@media screen and (max-width: 991px) {
+    #top-row * {
+        padding: 0;
+    }
+    #top-row img {
+        margin-left: 8.33%;
+        max-width: 25%;
+    }
+}
+
+
+/* #endregion */
+
+
+/* #region Header on phone */
+
+@media screen and (max-width: 767px) {
+    #top-row img {
+        margin-left: 0;
+    }
+}
+
+
+/* #endregion */
