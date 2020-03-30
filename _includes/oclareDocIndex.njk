@@ -23,9 +23,6 @@ layout: oclareBase.njk
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li>
-                    <a href="/userDocs/index.html" class="docLink">Introduction</a>
-                </li>
                 {%- for doc in collections.doc -%}
                     <li>
                         <a href="{{ doc.url }}" class="docLink">{{ doc.data.title }}</a>
